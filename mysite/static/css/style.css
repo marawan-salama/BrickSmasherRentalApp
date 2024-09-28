@@ -1,0 +1,112 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #954646;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Navigation Button Styles */
+button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.1);
+}
+
+/* Forms and Sections */
+form {
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 16px;
+}
+
+#success-message, #error-message {
+    color: #ffffff;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #000000;
+    border-left: 5px solid #ffffff;
+    display: none; /* Hide by default, show with JS if needed */
+}
+
+/* Tables for Movies */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #954646;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header, footer, main {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .form-group input {
+        width: calc(100% - 20px);
+    }
+}

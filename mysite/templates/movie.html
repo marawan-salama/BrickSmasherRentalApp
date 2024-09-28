@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Manage Movies | BrickSmasher Movie Rentals</title>
+</head>
+<body>
+    <header>
+        <h1>Manage Movies</h1>
+        <nav>
+            <button onclick="window.location.href='{% url 'home' %}'" class="back-link">Back to Home</button>
+        </nav>
+    </header>
+    <main>
+        <section id="add-movie">
+            <form>
+                <input type="text" id="new-movie-title" placeholder="Enter movie title" required>
+                <button type="button" onclick="addMovie()">Add Movie</button>
+            </form>
+        </section>
+        <section id="movies-list">
+            <div id="movies-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="movies-table-item">Title</th>
+                            <th class="movies-table-item">In Stock</th>
+                            <th class="movies-table-item">Checked Out</th>
+                            <th class="movies-table-item">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movies-table-body">
+                        <!-- Movie rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="error-message"></div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/movie.js' %}"></script>
+</body>
+</html>
